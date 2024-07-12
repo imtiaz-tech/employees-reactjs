@@ -2,12 +2,12 @@ import react from 'react'
 
 function EmployeeInfo(props){
     console.log("🚀 ~ EmployeeInfo ~ props:", props)
-    //    const{firstname,lastname,email}=props;
+        const{firstname,lastname,email}=props;
     return(
         <tr>
-          <td>{props.employee.firstname}</td>
-          <td>{props.employee.lastname}</td>
-          <td>{props.employee.email}</td>
+          <td>{props.firstname}</td>
+          <td>{props.lastname}</td>
+          <td>{props.email}</td>
         </tr>
 )
 }

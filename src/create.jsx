@@ -3,11 +3,8 @@ import axios from 'axios'
 
 function Create(){
     const [firstname, setfirstname]=useState()
-    console.log("🚀 ~ Create ~ firstname:", firstname)
     const [lastname,setlastname]=useState()
-    console.log("🚀 ~ Create ~ lastname:", lastname)
     const[email,setemail]=useState()
-    console.log("🚀 ~ Create ~ email:", email)
     const handleAdd=()=>{
         
         axios.post('http://localhost:3001/add',{firstname:firstname,lastname:lastname,email:email})

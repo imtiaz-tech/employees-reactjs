@@ -9,7 +9,7 @@ function Home() {
   useEffect(() => {
     axios
       .get("http://localhost:3001/get")
-      .then((result) => setemployees(result.data))
+      .then((result) => setemployees(result.data?.data))
       .catch((err) => console.log(err));
   }, []);
   return (
@@ -28,7 +28,10 @@ function Home() {
             <th>Email</th>
           </tr>
           {employees.map((employee) => (
-            <EmployeeInfo employee={employee} />
+            <EmployeeInfo 
+            firstname={employee.firstname}
+            lastname={employee.lastname}
+            email={employee.email} />
           ))}
         </table>
       )}
